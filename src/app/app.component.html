@@ -1,0 +1,22 @@
+
+<h1>hello</h1>
+
+<!-- <h1>({{ users | json }})</h1> -->
+
+
+<table>
+<tr>
+  <th>Email</th>
+  <th>Important</th>
+  <th>Subject</th>
+  <th>Contect</th>
+</tr>
+<tr *ngFor="let user of users">
+  <td> {{ user.Email |lowercase }} </td>
+  <td *ngIf='user.Importance'> High </td>
+  <td *ngIf='!user.Importance'> Low </td>
+  <td> {{ user.Subject }} </td>
+  <td> {{ user.Contect }} </td>
+  <!-- {{importance}} -->
+</tr>
+</table>
